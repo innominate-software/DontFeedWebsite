@@ -15,11 +15,6 @@ const LeagueActionType = {
 const LeagueCreateAction = (leagueState, history, setErrorHandler) => {
     return async (dispatch) => {
         try {
-            leagueState = {
-                ...leagueState,
-                matchFrequency: leagueState.matchFrequencyNumber + "p" + leagueState.matchFrequencyLetter
-            }
-            console.log(leagueState)
             const response = await axios.post("leagues/createLeague", leagueState);
             const { data } = response;
             dispatch({
@@ -29,7 +24,6 @@ const LeagueCreateAction = (leagueState, history, setErrorHandler) => {
             history.push(`/league/${data.id}`);
         } catch (error) {
             if (error.response) {
-                console.log(error);
                 dispatch({
                     type: LeagueActionType.LEAGUE_CREATE_FAIL,
                     payload: error.response.data.message,
@@ -43,7 +37,33 @@ const LeagueCreateAction = (leagueState, history, setErrorHandler) => {
     };
 };
 
+const LeagueReadAction = (id, setErrorHandler) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`leagues/${id}`);
+            const { data } = response;
+            dispatch({
+                type: LeagueActionType.LEAGUE_READ_SUCCESS,
+                payload: data,
+            });
+        } catch (error) {
+            if (error.response) {
+                console.error(error)
+                dispatch({
+                    type: LeagueActionType.LEAGUE_READ_FAIL,
+                    payload: error.response.data.message,
+                });
+                setErrorHandler({
+                    hasError: true,
+                    message: error.response.data.message,
+                });
+            }
+        }
+    };
+};
+
 export {
     LeagueCreateAction,
+    LeagueReadAction,
     LeagueActionType,
 };
