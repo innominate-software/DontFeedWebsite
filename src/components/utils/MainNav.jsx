@@ -10,15 +10,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import ErrorModal from "./ErrorModal";
 
 function MainNav(props) {
-	const { auth, logout } = props;
+	const { auth, logout, errorHandler, setErrorHandler } = props;
 	const history = useHistory();
 	const [loginModalShow, setLoginModalShow] = useState(false);
 	const [registerModalShow, setRegisterModalShow] = useState(false);
+	const [errorModalShow, setErrorModalShow] = useState(false);
 	// const [searchModalShow, setSearchModalShow] = useState(false);
 
-	// todo: create cleanForms functionality!!!
 	return (
 		<React.Fragment>
 			<Navbar sticky="top" expand="lg" className="df-dark-background">
@@ -85,9 +86,10 @@ function MainNav(props) {
 					</Navbar.Collapse>
 				</div>
 			</Navbar>
-			<LoginModal show={loginModalShow} setShow={setLoginModalShow} setRegisterShow={setRegisterModalShow} />
-			<RegisterModal show={registerModalShow} setShow={setRegisterModalShow} setLoginShow={setLoginModalShow} />
-		{/*	TODO create Error Modal plus error functionality*/}
+			<LoginModal show={loginModalShow} setShow={setLoginModalShow} setRegisterShow={setRegisterModalShow} setErrorHandler={setErrorHandler} />
+			<RegisterModal show={registerModalShow} setShow={setRegisterModalShow} setLoginShow={setLoginModalShow} setErrorHandler={setErrorHandler} />
+			{/*todo search modal*/}
+			<ErrorModal show={errorModalShow} setShow={setErrorModalShow} setLoginShow={setLoginModalShow} setRegisterShow={setRegisterModalShow} errorHandler={errorHandler} setErrorHandler={setErrorHandler} />
 		</React.Fragment>
 	);
 }

@@ -45,15 +45,21 @@ const LoginAuthAction = (loginState, setErrorHandler) => {
             });
         } catch (error) {
             if (error.response) {
-                console.log(error.response);
                 dispatch({
                     type: AuthActionType.LOGIN_FAIL,
                     payload: error.response.data.message,
                 });
-                if (error.response.status === 400)
+                let errorMessage;
+                switch (error.response.data.message) {
+                    case "Error: Unauthorized":
+                        errorMessage = "Username or Password are incorrect"
+                        break;
+                    default:
+                        errorMessage = "Generic unhandled issue message"
+                }
                 setErrorHandler({
                     hasError: true,
-                    message: error.response.data.message,
+                    message: errorMessage,
                 });
             }
         }
