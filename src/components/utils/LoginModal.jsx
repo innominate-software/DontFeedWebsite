@@ -75,6 +75,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		login: (loginState, history, setErrorHandler) => {
+		login: (loginState, setErrorHandler) => {
 			dispatch(LoginAuthAction(loginState, setErrorHandler))
 		}
 	}

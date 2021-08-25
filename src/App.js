@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import HomePage from "./components/HomePage/HomePage";
@@ -14,18 +14,18 @@ import MainNav from "./components/utils/MainNav";
 import Footer from "./components/utils/Footer";
 
 function App() {
-	// const [errorHandler, setErrorHandler] = useState({
-	// 	hasError: false,
-	// 	message: "",
-	// });
+	const [errorHandler, setErrorHandler] = useState({
+		hasError: false,
+		message: "",
+	});
 	return (
 		<div className="App app-container df-dark-background-2">
 			<Router>
-				<MainNav />
+				<MainNav errorHandler={errorHandler} setErrorHandler={setErrorHandler} />
 				<Switch>
-					<Route path="/" exact component={HomePage} />
+					<Route path="/" exact render={(props) => <HomePage {...props} setErrorHandler={setErrorHandler} />} />
 					<Route path="/TEST" exact component={Test} />
-					<Route path="/leagues/create" component={LeagueCreationPage} />
+					<Route path="/leagues/create" render={(props) => <LeagueCreationPage {...props} setErrorHandler={setErrorHandler} />} />
 					<Route path="/league/:id" component={LeagueProfilePage} />
 					<Route path="/teams/create" component={TeamCreationPage} />
 					<Route path="/team/:id" component={TeamProfilePage} />
