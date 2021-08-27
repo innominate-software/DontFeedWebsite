@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "home": "https://github.com/innominate-software/DontFeedWebsite.git",
+  "home": "https://innominate-software.github.io/dontfeed.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
