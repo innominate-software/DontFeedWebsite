@@ -231,7 +231,6 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(LeagueCreateAction(leagueState, history, setErrorHandler))
 		}
 	}
-	
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LeagueCreationPage);

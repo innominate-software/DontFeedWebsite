@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import HomePage from "./components/HomePage/HomePage";
 import LeagueCreationPage from "./components/LeagueCreationPage/LeagueCreationPage";
@@ -23,15 +23,15 @@ function App() {
 			<Router>
 				<MainNav errorHandler={errorHandler} setErrorHandler={setErrorHandler} />
 				<Switch>
-					<Route path="/" exact render={(props) => <HomePage {...props} setErrorHandler={setErrorHandler} />} />
-					<Route path="/TEST" exact component={Test} />
-					<Route path="/leagues/create" render={(props) => <LeagueCreationPage {...props} setErrorHandler={setErrorHandler} />} />
-					<Route path="/league/:id" component={LeagueProfilePage} />
-					<Route path="/teams/create" component={TeamCreationPage} />
-					<Route path="/team/:id" component={TeamProfilePage} />
-					<Route path="/match/:id" component={MatchInfoPage} />
-					<Route path="/user/:id" component={UserProfilePage} />
-					<Route path="/support" component={SupportPage} />
+					<Route exact path="/" render={(props) => <HomePage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route exact path="/leagues/create" render={props => <LeagueCreationPage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route path="/league/:id" render={props => <LeagueProfilePage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route exact path="/teams/create" render={props => <TeamCreationPage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route path="/team/:id" render={props => <TeamProfilePage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route path="/match/:id" render={props => <MatchInfoPage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route path="/user/:id" render={props => <UserProfilePage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route exact path="/support" render={props => <SupportPage {...props} setErrorHandler={setErrorHandler} />} />
+					<Route exact path="/TEST" component={Test} />
 				</Switch>
 				<Footer />
 			</Router>

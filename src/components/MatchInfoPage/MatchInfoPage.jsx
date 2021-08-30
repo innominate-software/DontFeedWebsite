@@ -1,8 +1,6 @@
 import React from "react";
-import MainNav from "../utils/MainNav";
-import Footer from "../utils/Footer";
 import MatchTitle from "./MatchTitle";
-import GameBanner from "./GameBanner";
+import MatchBanner from "./MatchBanner";
 import TeamA from "./TeamA";
 import TeamB from "./TeamB";
 import MatchInfo from "./MatchInfo";
@@ -10,17 +8,14 @@ import MatchPlayers from "./MatchPlayers";
 
 
 function MatchInfoPage(props) {
-    let { auth, match } = props;
+    let { match } = props;
     const page = "MatchInfoPage";
     return (
-        <div>
-            <main>
                 <div className="app-container container-fluid df-dark-background-2">
-                    <MainNav isLoggedIn={auth.isLoggedIn} />
                     <div className="parallax-container">
                         <div className="parallax">
-                            <GameBanner game={match?.game?.name}
-                                        alt="This is the banner that shows this match was played in " />
+                            <MatchBanner game={match?.game?.name}
+                                         alt="This is the banner that shows this match was played in " />
                         </div>
                         <div className="parallax-overlay">
                             <div className="row">
@@ -48,9 +43,6 @@ function MatchInfoPage(props) {
                         <div className="row space" />
                     </div>
                 </div>
-            </main>
-            <Footer />
-        </div>
     );
 }
 

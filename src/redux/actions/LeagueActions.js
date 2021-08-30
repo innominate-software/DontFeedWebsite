@@ -42,6 +42,7 @@ const LeagueReadAction = (id, setErrorHandler) => {
         try {
             const response = await axios.get(`leagues/${id}`);
             const { data } = response;
+            console.log(data)
             dispatch({
                 type: LeagueActionType.LEAGUE_READ_SUCCESS,
                 payload: data,
