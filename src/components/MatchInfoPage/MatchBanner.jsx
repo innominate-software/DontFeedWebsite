@@ -1,7 +1,7 @@
 import React from "react";
 import dota2 from '../../assets/img/games/dota/dota-bg.jpg';
 
-export default function GameBanner({game, alt}) {
+export default function MatchBanner({game, alt}) {
     let banner;
     switch (game) {
         case "DOTA2":
@@ -11,6 +11,8 @@ export default function GameBanner({game, alt}) {
             banner = null
     }
     return (
-        <img src={banner} alt={alt + game + "!"} />
+        <div className="bg">
+            {/*<img src={banner} alt={alt + game + "!"} />*/}
+        </div>
     )
 }
