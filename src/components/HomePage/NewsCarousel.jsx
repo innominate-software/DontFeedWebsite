@@ -12,14 +12,12 @@ export default function NewsCarousel(props) {
             <div className="carousel-inner news-carousel">
                 <div className="carousel-item news-item-1 active">
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>News Story 1</h5>
-                        <p>Insert some bullshit story about our website</p>
+                        <h5>News Story</h5>
                     </div>
                 </div>
                 <div className="carousel-item news-item-2">
                     <div className="carousel-caption d-none d-md-block">
                         <h5>News Story 2</h5>
-                        <p>Insert some bullshit story about ESports.</p>
                     </div>
                 </div>
             </div>
