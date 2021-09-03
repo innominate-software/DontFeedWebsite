@@ -1,6 +1,6 @@
 import React from "react";
-import TableHeader from "../Table/TableHeader";
-import TableBody from "../Table/TableBody";
+import TableHeader from "../utils/Table/TableHeader";
+import TableBody from "../utils/Table/TableBody";
 
 export default function Matches({matches}) {
     const header = ["Game", "Event", "Home Team", "Away Team", "Map", "Result", "Score", "Date"]

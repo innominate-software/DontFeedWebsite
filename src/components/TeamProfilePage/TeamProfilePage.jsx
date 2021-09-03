@@ -6,9 +6,9 @@ import Team from "./Team";
 import TeamInfo from "./TeamInfo";
 import TeamInfoCard from "./TeamInfoCard"
 import ActiveRoster from "./ActiveRoster";
-import Matches from "../utils/TableComponents/Matches";
-import Leagues from "../utils/TableComponents/Leagues";
-import PlayerHistory from "../utils/TableComponents/PlayerHistory";
+import Matches from "../LeagueProfilePage/Matches";
+import Leagues from "../LeagueProfilePage/Leagues";
+import PlayerHistory from "../LeagueProfilePage/PlayerHistory";
 
 function TeamProfilePage(props) {
     const { auth, team, tabs } = props;
