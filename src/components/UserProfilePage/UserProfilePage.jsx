@@ -4,8 +4,8 @@ import UserInfo from "./UserInfo";
 import Tabs from "../utils/Tabs";
 import Games from "./Games";
 import Teams from "./Teams";
-import Matches from "../utils/TableComponents/Matches";
-import Leagues from "../utils/TableComponents/Leagues";
+import Matches from "../LeagueProfilePage/Matches";
+import Leagues from "../LeagueProfilePage/Leagues";
 import { connect } from "react-redux";
 
 function UserProfilePage(props) {

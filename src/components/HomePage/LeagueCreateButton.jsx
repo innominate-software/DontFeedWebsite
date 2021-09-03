@@ -7,7 +7,7 @@ function LeagueCreateButton(props) {
 		<Link to="/leagues/create" href="#" className="card bg-dark text-white my-3">
 			<img src={createLeagueImage} className="card-img" alt="..." />
 			<div className="card-img-overlay">
-				<h1 className="card-title my-5 py-5 df-pink-text" style={{"-webkit-text-stroke": "2px black" }}>
+				<h1 className="card-title my-5 py-5 df-pink-text" style={{"WebkitTextStroke": "2px black" }}>
 					Click Here To Create Your Own League</h1>
 			</div>
 		</Link>

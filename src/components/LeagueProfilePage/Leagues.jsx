@@ -1,6 +1,6 @@
 import React from "react";
-import TableHeader from "../Table/TableHeader";
-import TableBody from "../Table/TableBody";
+import TableHeader from "../utils/Table/TableHeader";
+import TableBody from "../utils/Table/TableBody";
 
 export default function Leagues({leagues}) {
     const header = ["Game", "Name", "Season", "Dates", "Stage", "Team", "Placement", "W/L/D"]

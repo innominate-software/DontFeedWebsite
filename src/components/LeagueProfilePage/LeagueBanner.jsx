@@ -1,9 +1,14 @@
 import React from "react";
 import dota2 from '../../assets/img/games/dota/dota-bg.jpg';
+import Col from "react-bootstrap/Col";
+import LeagueLogo from "./LeagueLogo";
+import LeagueTitle from "./LeagueTitle";
+import Row from "react-bootstrap/Row";
+import LeagueInfo from "./LeagueInfo";
 
-export default function LeagueBanner({league}) {
+export default function LeagueBanner({ league, joinLeague }) {
     let banner;
-    switch (league.game) {
+    switch (league?.game?.name) {
         case "DOTA2":
             banner = dota2;
             break;
@@ -11,8 +16,18 @@ export default function LeagueBanner({league}) {
             banner = null
     }
     return (
-        <div className="bg">
-            {/*<img src={banner} alt={alt + game + "!"} />*/}
-        </div>
+        <Col className="game-banner" style={{ "backgroundImage": `url(${banner}` }}>
+            <div className="pt-5">
+                <LeagueLogo logo={league?.logo} />
+                <LeagueTitle name={league?.name} />
+            </div>
+            <Row className="py-5">
+                <Col xs={0} md={3} />
+                <Col>
+                    <LeagueInfo league={league} joinLeague={joinLeague} />
+                </Col>
+                <Col xs={0} md={3} />
+            </Row>
+        </Col>
     )
 }

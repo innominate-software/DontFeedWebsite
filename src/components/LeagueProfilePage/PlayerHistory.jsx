@@ -1,6 +1,6 @@
 import React from "react";
-import TableHeader from "../Table/TableHeader";
-import TableBody from "../Table/TableBody";
+import TableHeader from "../utils/Table/TableHeader";
+import TableBody from "../utils/Table/TableBody";
 
 export default function PlayerHistory({players}) {
     const header = ["Username", "Date Joined", "Date Left"]
