@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { LoginAuthAction } from "../../redux/actions/AuthActions";
+import { LoginAuthAction } from "../../../redux/actions/AuthActions";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";

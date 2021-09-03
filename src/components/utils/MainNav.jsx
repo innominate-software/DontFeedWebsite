@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
-import LoginModal from "./LoginModal";
+import LoginModal from "./modals/LoginModal";
 import { connect } from "react-redux";
 import { LogOutAuthAction } from "../../redux/actions/AuthActions";
-import RegisterModal from "./RegisterModal";
+import RegisterModal from "./modals/RegisterModal";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import ErrorModal from "./ErrorModal";
+import ErrorModal from "./modals/ErrorModal";
 
 function MainNav(props) {
 	const { auth, logout, errorHandler, setErrorHandler } = props;
