@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { RegisterAuthAction } from "../../redux/actions/AuthActions";
+import { RegisterAuthAction } from "../../../redux/actions/AuthActions";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import userDataService from "../../services/user.service"
+import userDataService from "../../../services/user.service"
 
 function RegisterModal(props) {
 	const { register, show, setShow, setLoginShow, setErrorHandler } = props;
