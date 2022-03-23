@@ -16,12 +16,12 @@ function LeagueProfilePage(props) {
 	useEffect(() => {
 		read(id, setErrorHandler)
 	}, [read, id, setErrorHandler])
-	
+
 	const joinLeague = (event) => {
 		event.preventDefault();
 		console.log("joining league maybe")
 	}
-	
+
 	return (
 		<Container fluid className="app-container df-dark-background px-0">
 			<Row>
@@ -30,7 +30,9 @@ function LeagueProfilePage(props) {
 			<Row>
 				<Tabs defaultActiveKey="standings" className="mb-3">
 					<Tab eventKey="standings" title="Standings">
-						<Standings standings={league?.standings} />
+						{league.standings ?
+							<Standings standings={league?.standings} />
+							: <h3>Currently no standings</h3>}
 					</Tab>
 					<Tab eventKey="matches" title="Matches">
 						<LeagueMatches matches={league?.matches} />
