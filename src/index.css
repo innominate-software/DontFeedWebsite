@@ -584,6 +584,11 @@ table.striped > tbody > tr:nth-child(odd) {
 .versus {
 	margin-bottom: auto;
 }
+/* ============================================================ table ========================== */
+
+table > thead > tr {
+    color: var(--df-grey)
+}
 
 .tabs .tab a:focus,
 .tabs .tab a:focus.active {
