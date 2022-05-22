@@ -1,18 +1,20 @@
 import React from "react";
 import HelpButton from "./HelpButton";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function HelpButtons(props) {
     return(
-        <div className="row">
-            <div className="col s4">
+        <Row>
+            <Col>
                 <HelpButton label="Submit Feedback" />
-            </div>
-            <div className="col s4">
+            </Col>
+            <Col>
                 <HelpButton label="Report Cheater" />
-            </div>
-            <div className="col s4">
+            </Col>
+            <Col>
                 <HelpButton label="Change Password" />
-            </div>
-        </div>
+            </Col>
+        </Row>
     )
 }

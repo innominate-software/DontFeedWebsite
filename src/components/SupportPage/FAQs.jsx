@@ -1,23 +1,34 @@
 import React from "react";
-import Question from "./Question";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Accordion from "react-bootstrap/Accordion";
 
-export default function FAQs({questions}) {
-    let listOfQuestions = questions.map((query, index) => <Question key={index} question={query.question} answer={query.answer} />)
-    return(
-        <div className="row">
-            <div className="col s12">
-                <div className="card card df-dark-background df-light-grey-text support-button">
-                    <div className="card-content">
-                        <span className="card-title">FAQ's</span>
-                        <ul className="collapsible">
-                            {listOfQuestions}
-                        </ul>
-                    </div>
-                    <div className="card-action">
-                        <span>If you don’t see your question here, feel free to submit feedback</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+export default function FAQs({ questions }) {
+	let listOfQuestions = questions.map(
+		(query, index) => (
+			<Accordion.Item eventKey={index} key={index}>
+				<Accordion.Header className="faqs">{query.question}</Accordion.Header>
+				<Accordion.Body>{query.answer}</Accordion.Body>
+			</Accordion.Item>
+		)
+	)
+	return (
+		<Row className="mb-5">
+			<Col>
+				<Card className="df-dark-background df-light-grey-text">
+					<Card.Header>FAQ's</Card.Header>
+					<Card.Body>
+						<Card.Text>
+							<Accordion>
+								{listOfQuestions}
+							</Accordion>
+						</Card.Text>
+					</Card.Body>
+					<Card.Footer className="text-muted">If you don’t see your question here, feel free to submit
+						feedback</Card.Footer>
+				</Card>
+			</Col>
+		</Row>
+	)
 }

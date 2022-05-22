@@ -1,0 +1,37 @@
+{
+	"match": {
+		"id": 1,
+		"game": "Dota 2",
+		"event": "EPIC League Division 1",
+		"duration": "31:04",
+		"gameMatchId": 5374263124,
+		"matchDate": "2020-11-12",
+		"matchTime": "07:00:00",
+		"score": "21:4",
+		"victor": "Virtus.pro",
+		"teamA": {
+			"id": 6,
+			"logo": null,
+			"name": "Virtus.pro",
+			"players": [
+				{ "id": 26, "username": "Nightfall", "profilePic": null },
+				{ "id": 27, "username": "gpk", "profilePic": null },
+				{ "id": 28, "username": "DM", "profilePic": null },
+				{ "id": 29, "username": "Save-", "profilePic": null },
+				{ "id": 30, "username": "Kingslayer", "profilePic": null }
+			]
+		},
+		"teamB": {
+			"id": 4,
+			"logo": null,
+			"name": "OG",
+			"players": [
+				{ "id": 16, "username": "midone", "profilePic": null },
+				{ "id": 17, "username": "Topson", "profilePic": null },
+				{ "id": 18, "username": "Ceb", "profilePic": null },
+				{ "id": 19, "username": "Saksa", "profilePic": null },
+				{ "id": 10, "username": "N0tail", "profilePic": null }
+			]
+		}
+	}
+}

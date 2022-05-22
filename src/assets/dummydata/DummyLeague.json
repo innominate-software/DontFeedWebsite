@@ -1,0 +1,218 @@
+{
+	"league": {
+		"id": 1,
+		"contacts": [
+			{
+				"discord": null,
+				"emailAddress": "dewie@dontfeed.gg",
+				"facebook": null,
+				"phoneNumber": null,
+				"job": "CTO",
+				"name": "Dewie"
+			},
+			{
+				"discord": null,
+				"emailAddress": "email@example.com",
+				"facebook": "Janethan-Doerty",
+				"phoneNumber": null,
+				"job": "Don't Feed Rep.",
+				"name": "Janethan Doerty"
+			},
+			{
+				"discord": "JohnathanDiscord#0000",
+				"emailAddress": "email@example.com",
+				"facebook": "Johnathan-Doe",
+				"phoneNumber": "(555) 555-5555",
+				"job": "League Coordinator",
+				"name": "Johnathan Doe"
+			}
+		],
+		"dateCreated": "2021-02-09",
+		"endDate": "2020-12-06",
+		"format": "PREDETERMINED",
+		"game": "Dota 2",
+		"lastUpdated": "2021-02-09",
+		"logoFilePath": null,
+		"matches": {
+			"futureMatches": [
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"dateTime": "2020-12-31 00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"dateTime": "2020-12-31 00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"dateTime": "2020-12-31 00:00:00"
+				}
+			],
+			"todaysMatches": [
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"time": "00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"time": "00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"time": "00:00:00"
+				}
+			],
+			"previousMatches": [
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"victor": "A",
+					"score": "1-2",
+					"dateTime": "2020-12-31 00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"victor": "A",
+					"score": "1-2",
+					"dateTime": "2020-12-31 00:00:00"
+				},
+				{
+					"matchId": 1,
+					"homeTeam": { "id": 6, "logo": null, "name": "Virtus.pro" },
+					"awayTeam": { "id": 3, "logo": null, "name": "Natus Vincere" },
+					"map": "-",
+					"victor": "A",
+					"score": "1-2",
+					"dateTime": "2020-12-31 00:00:00"
+				}
+			]
+		},
+		"maxTeams": 10,
+		"name": "EPIC League Division 1",
+		"platform": "pc",
+		"reward": null,
+		"rules": null,
+		"season": 2,
+		"stage": "COMPLETED",
+		"standings": [
+			{
+				"standing": 1,
+				"team": { "id": 6, "logo": null, "name": "Virtus.pro" },
+				"wins": 16,
+				"losses": 7,
+				"draws": 0,
+				"winRatio": 0.696,
+				"streak": "1W"
+			},
+			{
+				"standing": 2,
+				"team": { "id": 3, "logo": null, "name": "Natus Vincere" },
+				"wins": 14,
+				"losses": 10,
+				"draws": 0,
+				"winRatio": 0.583,
+				"streak": "3W"
+			},
+			{
+				"standing": 3,
+				"team": { "id": 8, "logo": null, "name": "Vikin.gg" },
+				"wins": 14,
+				"losses": 10,
+				"draws": 0,
+				"winRatio": 0.583,
+				"streak": "1L"
+			},
+			{
+				"standing": 4,
+				"team": { "id": 1, "logo": null, "name": "Team Secret" },
+				"wins": 13,
+				"losses": 10,
+				"draws": 0,
+				"winRatio": 0.565,
+				"streak": "3W"
+			},
+			{
+				"standing": 5,
+				"team": { "id": 4, "logo": null, "name": "OG" },
+				"wins": 12,
+				"losses": 11,
+				"draws": 0,
+				"winRatio": 0.522,
+				"streak": "2L"
+			},
+			{
+				"standing": 6,
+				"team": { "id": 7, "logo": null, "name": "Team Nigma" },
+				"wins": 14,
+				"losses": 13,
+				"draws": 0,
+				"winRatio": 0.519,
+				"streak": "1L"
+			},
+			{
+				"standing": 7,
+				"team": { "id": 5, "logo": null, "name": "Team Liquid" },
+				"wins": 13,
+				"losses": 13,
+				"draws": 0,
+				"winRatio": 0.5,
+				"streak": "2L"
+			},
+			{
+				"standing": 8,
+				"team": { "id": 10, "logo": null, "name": "Just-_-Error" },
+				"wins": 10,
+				"losses": 15,
+				"draws": 0,
+				"winRatio": 0.4,
+				"streak": "2W"
+			},
+			{
+				"standing": 9,
+				"team": { "id": 2, "logo": null, "name": "Alliance" },
+				"wins": 9,
+				"losses": 14,
+				"draws": 0,
+				"winRatio": 0.36,
+				"streak": "2L"
+			},
+			{
+				"standing": 10,
+				"team": { "id": 9, "logo": null, "name": "mudgolems" },
+				"wins": 7,
+				"losses": 17,
+				"draws": 0,
+				"winRatio": 0.292,
+				"streak": "8L"
+			}
+		],
+		"startDate": "2020-11-12",
+		"tournament": {
+			"id": 1,
+			"name": "EPIC League Season 2 Division 1 - Tournament"
+		}
+	}
+}

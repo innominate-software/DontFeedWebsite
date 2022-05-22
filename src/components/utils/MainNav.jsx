@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
-import LoginModal from "./LoginModal";
+import LoginModal from "./modals/LoginModal";
 import { connect } from "react-redux";
 import { LogOutAuthAction } from "../../redux/actions/AuthActions";
-import RegisterModal from "./RegisterModal";
+import RegisterModal from "./modals/RegisterModal";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import ErrorModal from "./ErrorModal";
+import ErrorModal from "./modals/ErrorModal";
 
 function MainNav(props) {
 	const { auth, logout, errorHandler, setErrorHandler } = props;
@@ -30,38 +30,43 @@ function MainNav(props) {
 						<Nav className="" style={{ maxHeight: '100px' }} navbarScroll>
 							<NavDropdown title="Teams" id="navbarScrollingDropdown"
 										 className="df-light-grey-text mx-0 mx-xl-3">
-								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+								<NavDropdown.Item href="#action3">Create a Team</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">Your Teams</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Team 1</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Team 2</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Team 3</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Team 4</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title="Leagues" id="navbarScrollingDropdown"
 										 className="df-light-grey-text mx-0 mx-xl-3">
-								<NavDropdown.Item href="#action3">poop</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Another poop</NavDropdown.Item>
+								<NavDropdown.Item href="#action3">Create a League</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">Your Leagues</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">Something poop here</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">League 1</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">League 2</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">League 3</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">League 4</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title="Players" id="navbarScrollingDropdown"
 										 className="df-light-grey-text mx-0 mx-xl-3">
-								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+								<NavDropdown.Item href="#action3">Teammates</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">List of Players</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Player 1</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Player 2</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Player 3</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">Player 4</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title="Matches" id="navbarScrollingDropdown"
 										 className="df-light-grey-text mx-0 mx-xl-3">
-								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+								<NavDropdown.Item href="#action3">Past Matches</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">Upcoming Matches</NavDropdown.Item>
+								<NavDropdown.Item href="#action5">All Matches</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title="Support" id="navbarScrollingDropdown"
 										 className="df-light-grey-text mx-0 mx-xl-3">
-								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+								<NavDropdown.Item href="#action3">Contact Suport</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
 						<Form className="d-flex w-100">
