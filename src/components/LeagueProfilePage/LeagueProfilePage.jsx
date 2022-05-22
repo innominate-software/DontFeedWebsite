@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { LeagueReadAction } from "../../redux/actions/LeagueActions";
 import Container from "react-bootstrap/Container";
@@ -9,19 +9,19 @@ import Standings from "./Standings";
 import LeagueMatches from "./LeagueMatches";
 import Support from "./Support";
 import LeagueBanner from "./LeagueBanner";
+import { league } from "../../assets/dummydata/DummyLeague.json";
 
 function LeagueProfilePage(props) {
-	const { read, league, setErrorHandler } = props;
-	const id = props.match.params.id;
-	useEffect(() => {
-		read(id, setErrorHandler);
-	}, [read, id, setErrorHandler]);
+	// const { read, setErrorHandler } = props;
+	// const id = props.match.params.id;
+	// useEffect(() => {
+	// read(id, setErrorHandler);
+	// }, [read, id, setErrorHandler]);
 
 	const joinLeague = event => {
 		event.preventDefault();
 		console.log("joining league maybe");
 	};
-
 	return (
 		<Container fluid className="app-container df-dark-background px-0">
 			<Row>

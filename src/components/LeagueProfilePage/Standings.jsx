@@ -16,10 +16,18 @@ export default function Standings({ standings }) {
 				</tr>
 			</thead>
 			<tbody>
-				{standings?.map((standing, index) => (<tr key={index}>
-					{standing?.map((row, index) => (<td key={index} className={row.className}>{row.text}</td>))}
-				</tr>))}
+				{standings?.map((standing, index) => (
+					<tr key={index}>
+						<td>{standing.standing}</td>
+						<td>{standing.team.name}</td>
+						<td>{standing.wins}</td>
+						<td>{standing.losses}</td>
+						<td>{standing.draws}</td>
+						<td>{standing.winRatio}</td>
+						<td>{standing.streak}</td>
+					</tr>
+				))}
 			</tbody>
 		</Table>
-	)
+	);
 }

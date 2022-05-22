@@ -1,6 +1,6 @@
 import React from "react";
 import dota2 from "../../assets/img/games/dota/dota-bg.jpg";
-// import dontfeed from "../../assets/img/defaultMatchBanner.jpg";
+import dontfeed from "../../assets/img/defaultMatchBanner.jpg";
 import Col from "react-bootstrap/Col";
 import LeagueLogo from "./LeagueLogo";
 import LeagueTitle from "./LeagueTitle";
@@ -9,14 +9,13 @@ import LeagueInfo from "./LeagueInfo";
 
 export default function LeagueBanner({ league, joinLeague }) {
 	let banner;
-	switch (league?.game?.name) {
+	switch (league?.game) {
 		case "DOTA2":
 			banner = dota2;
 			break;
 		default:
-		// banner = dontfeed;
+			banner = dontfeed;
 	}
-	console.log(banner);
 	return (
 		<Col className="game-banner" style={{ backgroundImage: `url(${banner}` }}>
 			<div className="pt-5">
