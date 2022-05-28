@@ -1,102 +1,147 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import { TeamCreateAction } from "../../redux/actions/TeamActions";
+import teamDataService from "../../services/team.service";
 
 function TeamCreationPage(props) {
-    const { teamCreate } = props;
-    const [teamState, setTeamState] = useState({});
-    const history = useHistory();
-    // const [errorHandler, setErrorHandler] = useState({
-    //     hasError: false,
-    //     message: "",
-    // });
-    return (
-        <div>
-            <main>
-                <div className="app-container container-fluid df-dark-background-2">
-                    <div className="container-fluid page-container">
-                        <div className="row">
-                            <div className="col s12">
-                                <h1 className="page-title">Create A Team</h1>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <form className="col s12" onSubmit={(event) => {
-                                event.preventDefault();
-                                teamCreate(teamState, history)
-                            }}>
-                                <div className="row">
-                                    <div className="input-field col s6">
-                                        <label className="input-label">Logo<span className="required">*</span><i
-                                            className="material-icons input-valid ">check_circle</i>
-                                            <input type="text" id="logo" name="logo" required={true} disabled={true}
-                                                   onChange={(event) => {
-                                                       const logo = event.target.value;
-                                                       setTeamState({ ...teamState, ...{ logo } })
-                                                   }} />
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <label className="input-label">Team Name<span className="required">*</span><i
-                                            className="material-icons input-valid ">check_circle</i>
-                                            <input type="text" id="name" name="name" required={true}
-                                                   onChange={(event) => {
-                                                       const name = event.target.value;
-                                                       setTeamState({ ...teamState, ...{ name } })
-                                                   }} />
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <label className="input-label">Password<span className="required">*</span><i
-                                            className="material-icons input-valid ">check_circle</i>
-                                            <input type="password" id="teamPassword" name="teamPassword" required={true}
-                                                   onChange={(event) => {
-                                                       const password = event.target.value;
-                                                       setTeamState({ ...teamState, ...{ password } })
-                                                   }} />
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <label className="input-label">Team Info
-                                            <textarea id="motto" name="motto" className="materialize-textarea"
-                                                      onChange={(event) => {
-                                                          const motto = event.target.value;
-                                                          setTeamState({ ...teamState, ...{ motto } })
-                                                      }} />
-                                        </label>
-                                    </div>
-                                </div>
-                                <button type="submit" className="grey-btn btn right"><i
-                                    className="material-icons right">chevron_right</i>Create Team
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-    );
+	const { teamCreate } = props;
+	const [teamState, setTeamState] = useState({});
+	const [formValidation, setFormValidation] = useState({});
+	const history = useHistory();
+	// const [errorHandler, setErrorHandler] = useState({
+	//     hasError: false,
+	//     message: "",
+	// });
+	return (
+		<Container fluid className="app-container df-dark-background-2">
+			<Row>
+				<Col className="my-5">
+					<h1 className="page-title">Create A Team</h1>
+				</Col>
+			</Row>
+			<Row className="px-5">
+				<Form
+					onSubmit={event => {
+						event.preventDefault();
+						teamCreate(teamState, history);
+					}}
+				>
+					<Row>
+						<Col>
+							<Form.Group as={Col} className="mb-3" controlId="teamCreateName">
+								<Form.Label className="ms-3">Team Name</Form.Label>
+								<Form.Control
+									required
+									type="text"
+									placeholder="Team Name"
+									onBlur={event => {
+										const name = event.target.value.trim();
+										setTeamState({ ...teamState, ...{ name } });
+										teamDataService.existsByName(name).then(response => {
+											setFormValidation({
+												...formValidation,
+												validName: !response.data,
+											});
+										});
+										if (name === "") {
+											setFormValidation({
+												...formValidation,
+												validName: false,
+											});
+										}
+									}}
+								/>
+								<Form.Text
+									className={
+										teamState.name
+											? formValidation.validName
+												? "valid"
+												: "invalid"
+											: "text-muted"
+									}
+								>
+									Must be unique
+								</Form.Text>
+							</Form.Group>
+							<Form.Group
+								as={Col}
+								className="mb-3"
+								controlId="teamCreatePassword"
+							>
+								<Form.Label className="ms-3">Password</Form.Label>
+								<Form.Control
+									type="password"
+									placeholder="Password"
+									onChange={event => {
+										const password = event.target.value;
+										setTeamState({ ...teamState, ...{ password } });
+									}}
+								/>
+							</Form.Group>
+							<Form.Group className="mb-3" controlId="teamCreateMotto">
+								<Form.Label>Team Motto</Form.Label>
+								<Form.Control
+									as="textarea"
+									rows={5}
+									onChange={event => {
+										const motto = event.target.value;
+										setTeamState({ ...teamState, ...{ motto } });
+									}}
+								/>
+							</Form.Group>
+						</Col>
+						<Col>
+							<Card className="logo-preview"></Card>
+						</Col>
+					</Row>
+					{formValidation.validName ? (
+						<div className="d-grid gap-2">
+							<Button size="lg" variant="primary" type="submit">
+								Create League
+							</Button>
+						</div>
+					) : (
+						<div className="d-grid gap-2">
+							<Button
+								size="lg"
+								variant="secondary"
+								className="df-light-grey-text"
+								onMouseEnter={e => {
+									e.target.textContent = "Form is not Finished";
+								}}
+								onMouseLeave={e => {
+									e.target.textContent = "Finish Registration Form";
+								}}
+							>
+								Finish Registration Form
+							</Button>
+						</div>
+					)}
+				</Form>
+			</Row>
+		</Container>
+	);
 }
 
-const mapStateToProps = (state) => {
-    return {
-        team: state
-    };
+const mapStateToProps = state => {
+	return {
+		team: state,
+	};
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        teamCreate: (teamState, history, setErrorHandler) => {
-            dispatch(TeamCreateAction(teamState, history, setErrorHandler));
-        },
-    };
+const mapDispatchToProps = dispatch => {
+	return {
+		teamCreate: (teamState, history, setErrorHandler) => {
+			dispatch(TeamCreateAction(teamState, history, setErrorHandler));
+		},
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TeamCreationPage);
