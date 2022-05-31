@@ -1,7 +1,9 @@
 import React from "react";
-import MainNav from "../utils/MainNav";
-import Footer from "../utils/Footer";
-import Tabs from "../utils/Tabs";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import Team from "./Team";
 import TeamInfo from "./TeamInfo";
 import TeamInfoCard from "./TeamInfoCard";
@@ -9,42 +11,40 @@ import ActiveRoster from "./ActiveRoster";
 import Matches from "./Matches";
 import Leagues from "./Leagues";
 import PlayerHistory from "./PlayerHistory";
+import { team } from "../../assets/dummydata/DummyTeam.json";
 
 function TeamProfilePage(props) {
-	const { auth, team, tabs } = props;
 	return (
-		<div>
-			<main>
-				<div className="app-container container-fluid df-dark-background-2">
-					<MainNav isLoggedIn={auth.isLoggedIn} />
-					<div className="container-fluid page-container">
-						<div className="row team-info">
-							<Team teamLogo={team?.logo} teamName={team?.name} />
-							<TeamInfo
-								dateCreated={team?.dateCreated}
-								lastUpdated={team?.lastUpdated}
-								numberOfActiveLeagues={team?.activeLeagues}
-								numberOfFirstPlaceTrophies={team?.firstPlaceTrophies}
-							/>
-						</div>
-						{team?.teamInfo ? <TeamInfoCard teamInfo={team?.teamInfo} /> : null}
-						<div className="row">
-							<div className="col s12">
-								<Tabs tabs={tabs} />
-							</div>
-							<ActiveRoster
-								players={team?.activeRoster}
-								page="TeamProfilePage"
-							/>
+		<Container fluid className="app-container df-dark-background-2">
+			<Row className="team-info">
+				<Team teamLogo={team?.logo} teamName={team?.name} />
+				<TeamInfo
+					dateCreated={team?.dateCreated}
+					lastUpdated={team?.lastUpdated}
+					numberOfActiveLeagues={team?.activeLeagues}
+					numberOfFirstPlaceTrophies={team?.firstPlaceTrophies}
+				/>
+			</Row>
+			<TeamInfoCard teamInfo={team?.motto} />
+			<Row>
+				<Col>
+					<Tabs id="teamProfileTabs">
+						<Tab eventKey="activeRoster" title="Active Roster">
+							<ActiveRoster players={team?.activePlayers} />
+						</Tab>
+						<Tab eventKey="matches" title="Matches">
 							<Matches matches={team?.matches} />
+						</Tab>
+						<Tab eventKey="leagues" title="Leagues">
 							<Leagues leagues={team?.leagues} />
-							<PlayerHistory exPlayers={team?.playerHistory} />
-						</div>
-					</div>
-				</div>
-			</main>
-			<Footer />
-		</div>
+						</Tab>
+						<Tab eventKey="playerHistory" title="Player History">
+							<PlayerHistory players={team?.playerHistory} />
+						</Tab>
+					</Tabs>
+				</Col>
+			</Row>
+		</Container>
 	);
 }
 

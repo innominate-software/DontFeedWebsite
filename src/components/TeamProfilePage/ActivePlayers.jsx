@@ -1,54 +1,40 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import ActivePlayer from "./ActivePlayer";
 
-export default function ActivePlayers({players, page}) {
-    const rowOfPlayers = players?.map((player, index) => <ActivePlayer key={index} player={player} page={page} />);
-    let activePlayers;
-    switch (players?.length) {
-        case 1:
-            activePlayers = <div>
-                <div className="col s5" />
-                {rowOfPlayers}
-                <div className="col s5" />
-            </div>;
-            break;
-        case 2:
-            activePlayers = <div>
-                <div className="col s4" />
-                {rowOfPlayers}
-                <div className="col s4" />
-            </div>;
-            break;
-        case 3:
-            activePlayers = <div>
-                <div className="col s3" />
-                {rowOfPlayers}
-                <div className="col s3" />
-            </div>;
-            break;
-        case 4:
-            activePlayers = <div>
-                <div className="col s2" />
-                {rowOfPlayers}
-                <div className="col s2" />
-            </div>;
-            break;
-        case 5:
-            activePlayers = <div>
-                <div className="col s1" />
-                {rowOfPlayers}
-                <div className="col s1" />
-            </div>;
-            break;
-        case 6:
-            activePlayers = rowOfPlayers;
-            break;
-        default:
-            break;
-    }
-    return (
-        <div className="row active-players">
-            {activePlayers}
-        </div>
-    )
+export default function ActivePlayers({ players }) {
+	const rowOfPlayers = players?.map((player, index) => (
+		<ActivePlayer key={index} player={player} />
+	));
+	let size;
+	switch (players?.length) {
+		case 1:
+			size = 5;
+			break;
+		case 2:
+			size = 4;
+			break;
+		case 3:
+			size = 3;
+			break;
+		case 4:
+			size = 2;
+			break;
+		case 5:
+			size = 1;
+			break;
+		case 6:
+			size = 0;
+			break;
+		default:
+			break;
+	}
+	return (
+		<Row className="active-players">
+			{size !== 0 ?? <Col s={size} />}
+			{rowOfPlayers}
+			{size !== 0 ?? <Col s={size} />}
+		</Row>
+	);
 }

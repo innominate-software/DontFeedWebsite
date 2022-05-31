@@ -1,0 +1,189 @@
+{
+	"team": {
+		"activeLeagues": 1,
+		"activePlayers": [
+			{
+				"id": 1,
+				"profilePicUrl": null,
+				"username": "whatever",
+				"dateJoined": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"profilePicUrl": null,
+				"username": "whatever",
+				"dateJoined": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"profilePicUrl": null,
+				"username": "whatever",
+				"dateJoined": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"profilePicUrl": null,
+				"username": "whatever",
+				"dateJoined": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"profilePicUrl": null,
+				"username": "whatever",
+				"dateJoined": "2022-01-01"
+			}
+		],
+		"dateCreated": "2021-02-22",
+		"firstPlaceTrophies": 1,
+		"id": 1,
+		"lastUpdated": "2021-02-22",
+		"leagues": [
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			}
+		],
+		"matches": [
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "this team",
+				"awayTeam": "another team",
+				"map": "dota only has one map",
+				"result": "Loss",
+				"score": "1-3",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 2,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "this team",
+				"awayTeam": "another team",
+				"map": "dota only has one map",
+				"result": "Won",
+				"score": "3-1",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 3,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "another team",
+				"awayTeam": "this team",
+				"map": "dota only has one map",
+				"result": "Won",
+				"score": "1-3",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 4,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "another team",
+				"awayTeam": "this team",
+				"map": "dota only has one map",
+				"result": "Loss",
+				"score": "1-3",
+				"date": "2020-11-12"
+			}
+		],
+		"motto": "Team Secret is a European professional Dota 2 team.",
+		"name": "Team Secret",
+		"playerHistory": [
+			{
+				"id": 1,
+				"username": "whatever",
+				"dateJoined": "2022-01-01",
+				"dateLeft": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"username": "whatever",
+				"dateJoined": "2022-01-01",
+				"dateLeft": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"username": "whatever",
+				"dateJoined": "2022-01-01",
+				"dateLeft": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"username": "whatever",
+				"dateJoined": "2022-01-01",
+				"dateLeft": "2022-01-01"
+			},
+			{
+				"id": 1,
+				"username": "whatever",
+				"dateJoined": "2022-01-01",
+				"dateLeft": "2022-01-01"
+			}
+		]
+	}
+}
