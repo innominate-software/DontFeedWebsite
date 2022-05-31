@@ -1,13 +1,15 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
 
-export default function TeamInfoCard({teamInfo}) {
-    return (
-        <div className="row">
-            <div className="card blue-grey darken-1 rounded">
-                <div className="card-content df-dark-background df-light-grey-text">
-                    <h6>{teamInfo}</h6>
-                </div>
-            </div>
-        </div>
-    )
+export default function TeamInfoCard({ teamInfo }) {
+	return (
+		<Row className="row">
+			<Card className="blue-grey darken-1 rounded">
+				<Card.Body className="card-content df-dark-background df-light-grey-text">
+					<h6>{teamInfo ?? "No team info recorded"}</h6>
+				</Card.Body>
+			</Card>
+		</Row>
+	);
 }

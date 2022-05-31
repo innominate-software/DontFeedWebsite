@@ -1,17 +1,23 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import defaultTeam from "../../assets/img/default-team.png";
 
-export default function Team({teamLogo, teamName}) {
-    return (
-        <div className="col s6">
-            <div className="row">
-                <div className="col s3">
-                    <img src={teamLogo ? teamLogo : defaultTeam} className="picture" alt={teamName} />
-                </div>
-                <div className="col s9 left-align player-names-info df-light-grey-text">
-                    <h4 className="team-name">{teamName}</h4>
-                </div>
-            </div>
-        </div>
-    )
+export default function Team({ teamLogo, teamName }) {
+	return (
+		<Col>
+			<Row>
+				<Col s={3}>
+					<img
+						src={teamLogo ? teamLogo : defaultTeam}
+						className="picture"
+						alt={teamName}
+					/>
+				</Col>
+				<Col s={9} className="left-align player-names-info df-light-grey-text">
+					<h4 className="team-name">{teamName}</h4>
+				</Col>
+			</Row>
+		</Col>
+	);
 }
