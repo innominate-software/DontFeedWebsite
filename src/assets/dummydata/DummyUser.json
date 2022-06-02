@@ -1,0 +1,174 @@
+{
+	"user": {
+		"activeLeagues": 1,
+		"dateJoined": "2021-02-22",
+		"firstPlaceTrophies": 1,
+		"firstName": "avep",
+		"id": 1,
+		"lastName": "niode",
+		"lastOnline": "2021-02-22",
+		"lastUpdated": "2021-02-22",
+		"leagues": [
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			},
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"name": "god who even cares",
+				"season": "random ass number",
+				"dates": "now - never",
+				"stage": "completed i guess",
+				"team": "tema name here",
+				"placement": "1st",
+				"winLossDraw": "0/0/0"
+			}
+		],
+		"matches": [
+			{
+				"id": 1,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "this team",
+				"awayTeam": "another team",
+				"map": "dota only has one map",
+				"result": "Loss",
+				"score": "1-3",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 2,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "this team",
+				"awayTeam": "another team",
+				"map": "dota only has one map",
+				"result": "Won",
+				"score": "3-1",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 3,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "another team",
+				"awayTeam": "this team",
+				"map": "dota only has one map",
+				"result": "Won",
+				"score": "1-3",
+				"date": "2020-11-12"
+			},
+			{
+				"id": 4,
+				"game": "Dota 2",
+				"event": "Doesn't Matter Right Now",
+				"homeTeam": "another team",
+				"awayTeam": "this team",
+				"map": "dota only has one map",
+				"result": "Loss",
+				"score": "1-3",
+				"date": "2020-11-12"
+			}
+		],
+		"teams": {
+			"activeTeams": [
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "trash",
+					"startDate": "2020-20-20"
+				}
+			],
+			"previousTeams": [
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "god who cares",
+					"startDate": "2020-20-20",
+					"endDate": "2020-20-20"
+				},
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "god who cares",
+					"startDate": "2020-20-20",
+					"endDate": "2020-20-20"
+				},
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "god who cares",
+					"startDate": "2020-20-20",
+					"endDate": "2020-20-20"
+				},
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "god who cares",
+					"startDate": "2020-20-20",
+					"endDate": "2020-20-20"
+				},
+				{
+					"id": 1,
+					"logoPath": null,
+					"name": "god who cares",
+					"startDate": "2020-20-20",
+					"endDate": "2020-20-20"
+				}
+			]
+		},
+		"username": "avpnio"
+	}
+}
