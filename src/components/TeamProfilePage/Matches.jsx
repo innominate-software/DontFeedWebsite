@@ -3,7 +3,6 @@ import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 
 export default function Matches({ matches }) {
-	console.log(matches);
 	let matchTabContent = <h3>Currently no matches have been recorded</h3>;
 	if (matches?.length !== 0) {
 		matchTabContent = (

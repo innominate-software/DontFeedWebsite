@@ -1,17 +1,27 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
 import createLeagueImage from "../../assets/img/LeagueCreateImage.jpg";
-import { Link } from "react-router-dom";
 
 function LeagueCreateButton(props) {
+	// TODO: send to league create page
 	return (
-		<Link to="/leagues/create" href="#" className="card bg-dark text-white my-3">
-			<img src={createLeagueImage} className="card-img" alt="..." />
-			<div className="card-img-overlay">
-				<h1 className="card-title my-5 py-5 df-pink-text" style={{"WebkitTextStroke": "2px black" }}>
-					Click Here To Create Your Own League</h1>
-			</div>
-		</Link>
-	)
+		<Card
+			onClick={() => {
+				console.log("this doesnt work");
+			}}
+			className="bg-dark text-white my-3"
+		>
+			<Card.Img src={createLeagueImage} />
+			<Card.ImgOverlay>
+				<Card.Title
+					className="my-5 py-5 df-pink-text"
+					style={{ WebkitTextStroke: "2px black" }}
+				>
+					Click Here To Create Your Own League
+				</Card.Title>
+			</Card.ImgOverlay>
+		</Card>
+	);
 }
 
 export default LeagueCreateButton;
