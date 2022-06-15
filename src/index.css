@@ -78,6 +78,14 @@ h5 {
 	color: var(--df-grey);
 }
 
+.home-page-background {
+	background: url("./assets/img/games/valorant/VALORANT_YR1_KeyArt_4k_3_.jpeg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .df-dark-background {
 	background: var(--df-dark) !important;
 }
@@ -104,6 +112,23 @@ h5 {
 
 .navbar-dark .navbar-nav .nav-link {
 	color: var(--df-grey);
+}
+
+.accordion-item {
+	background: var(--df-dark);
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+	background-color: var(--df-dark-grey);
+	color: var(--df-grey);
+}
+
+.accordion-button:focus {
+	border: none !important;
+	border-width: 0 !important;
+	box-shadow: none !important;
+	outline: 0 !important;
 }
 
 .accordion-button:after {
@@ -154,6 +179,11 @@ h5 {
 .app-container {
 	min-height: 90vh;
 	padding: 0;
+}
+
+.text-stroke {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
 }
 
 .valid {

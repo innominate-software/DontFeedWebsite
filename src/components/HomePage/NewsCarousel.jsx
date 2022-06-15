@@ -4,28 +4,16 @@ import newsImage1 from "../../assets/img/esports-pic-1.jpg";
 
 export default function NewsCarousel(props) {
 	return (
-		<Carousel>
+		<Carousel indicators={false} controls={false}>
 			<Carousel.Item>
-				<img className="d-block w-100" src={newsImage1} alt="First slide" />
+				<img
+					className="d-block w-100 news-image"
+					src={newsImage1}
+					alt="Welcome To DontFeed.gg"
+				/>
 				<Carousel.Caption>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img className="d-block w-100" src={newsImage1} alt="Second slide" />
-
-				<Carousel.Caption>
-					<h3>Second slide label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img className="d-block w-100" src={newsImage1} alt="Third slide" />
-
-				<Carousel.Caption>
-					<h3>Third slide label</h3>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl</p>
+					<h1 className="text-stroke">Welcome To DontFeed.gg</h1>
+					<p>Where professional Esports meets casual gaming</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>
