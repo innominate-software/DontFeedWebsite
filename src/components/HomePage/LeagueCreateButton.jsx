@@ -10,7 +10,7 @@ function LeagueCreateButton(props) {
 			onClick={() => {
 				console.log("this doesnt work ... something about history lol");
 			}}
-			className="bg-dark text-white my-3"
+			className="bg-dark text-white my-3 pointer"
 		>
 			<Card.Img src={createLeagueImage} />
 			<Card.ImgOverlay className="d-flex">
