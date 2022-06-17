@@ -14,23 +14,23 @@ function MatchInfoPage(props) {
 	const page = "MatchInfoPage";
 	return (
 		<Container fluid className="app-container df-dark-background-2">
-			<MatchBanner game={match.game} />
+			{/* <MatchBanner game={match.game} /> */}
 			<Row>
-				<Col s={2} />
-				<Col s={8}>
+				<Col sm={2} />
+				<Col sm={8}>
 					<MatchTitle
 						eventName={match.event}
 						victor={match.victor}
 						score={match.score}
 					/>
 				</Col>
-				<Col s={2} />
+				<Col sm={2} />
 			</Row>
 			<Row className="df-light-grey-text">
-				<Col s={6}>
+				<Col sm={6}>
 					<TeamA name={match.teamA.name} />
 				</Col>
-				<Col s={6}>
+				<Col sm={6}>
 					<TeamB name={match.teamB.name} />
 				</Col>
 			</Row>

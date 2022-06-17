@@ -78,14 +78,6 @@ h5 {
 	color: var(--df-grey);
 }
 
-.home-page-background {
-	background: url("./assets/img/games/valorant/VALORANT_YR1_KeyArt_4k_3_.jpeg");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 .df-dark-background {
 	background: var(--df-dark) !important;
 }
@@ -265,6 +257,85 @@ h5 {
 	border-radius: 6px !important;
 }
 
+.player-container {
+	margin: 0 5rem;
+}
+
+.match-main-info {
+	margin-top: 10rem !important;
+}
+
+.match-score {
+	margin-top: 0;
+	padding: 0.5rem !important;
+	background: rgba(30, 34, 42, 0.7);
+	border-bottom-left-radius: 4rem;
+	border-bottom-right-radius: 4rem;
+}
+
+.match-victor {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.5rem !important;
+	background: rgba(30, 34, 42, 0.7);
+	border-bottom-left-radius: 4rem;
+	border-bottom-right-radius: 4rem;
+}
+
+.match-league {
+	margin-bottom: 0;
+	padding: 0.5rem !important;
+	background: rgba(30, 34, 42, 0.7);
+	border-radius: 4rem;
+}
+
+.match-team-name {
+	margin-top: 3rem;
+}
+
+.match-team-pic {
+	border-radius: 50%;
+	max-height: 10rem;
+}
+
+.match-players {
+	background: #1e222a;
+	border-radius: 4rem;
+	padding: 0;
+	margin: 0 1rem !important;
+}
+
+.center-players,
+.div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.active-players div.col {
+	margin-bottom: 2rem;
+}
+
+.team-players {
+	border-radius: 50%;
+	max-height: 4rem;
+	font-size: 1rem;
+	text-align: center;
+	text-overflow: ellipsis;
+}
+
+.versus {
+	margin-bottom: auto;
+}
+
+.picture {
+	border-radius: 50%;
+	max-height: 6.25rem;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-overflow: ellipsis;
+}
+
 /* making new classes anything in here stays anything outside is gone*/
 /* 
 .content-container {
@@ -417,14 +488,6 @@ h5 {
 	overflow: hidden;
 }
 
-.picture {
-	border-radius: 50%;
-	max-height: 6.25rem;
-	font-size: 1.4em;
-	font-weight: bold;
-	text-overflow: ellipsis;
-}
-
 .team-players {
 	border-radius: 50%;
 	max-height: 4rem;
@@ -475,10 +538,6 @@ h5 {
 
 .user-game-bubbles {
 	margin: 2rem 0 !important;
-}
-
-.active-players div.col {
-	margin-bottom: 2rem;
 }
 
 #active-roster h1 {
@@ -546,68 +605,13 @@ h5 {
 	vertical-align: center !important;
 }
 
-.match-main-info {
-	margin-top: 10rem !important;
-}
-
-.match-team-name {
-	margin-top: 3rem;
-}
-
-.match-team-pic {
-	border-radius: 50%;
-	max-height: 10rem;
-}
-
-.match-players {
-	background: #1e222a;
-	border-radius: 4rem;
-	padding: 0;
-	margin: 0 1rem !important;
-}
-
-.match-league {
-	margin-bottom: 0;
-	padding: 0.5rem !important;
-	background: rgba(30, 34, 42, 0.7);
-	border-radius: 4rem;
-}
-
-.match-victor {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0.5rem !important;
-	background: rgba(30, 34, 42, 0.7);
-	border-bottom-left-radius: 4rem;
-	border-bottom-right-radius: 4rem;
-}
-
-.match-score {
-	margin-top: 0;
-	padding: 0.5rem !important;
-	background: rgba(30, 34, 42, 0.7);
-	border-bottom-left-radius: 4rem;
-	border-bottom-right-radius: 4rem;
-}
-
 .space {
 	min-height: 3rem;
 }
 
-.player-container {
-	margin: 0 5rem;
-}
 
-.center-players,
-.div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.versus {
-	margin-bottom: auto;
-}
+
 
 .nav-tabs .nav-item {
 	margin: 0 2rem 0 2rem;

@@ -18,18 +18,18 @@ export default function MatchInfo({
 			break;
 	}
 	return (
-		<Row className="page-container">
-			<Col s={4}>
+		<Row>
+			<Col sm={4}>
 				<div>match duration</div>
 				<h4>{duration}</h4>
 			</Col>
-			<Col s={4}>
+			<Col sm={4}>
 				<div>{game} match id</div>
 				<h4>{matchId}</h4>
 				<div>Don't Feed match id</div>
 				<h4>{id}</h4>
 			</Col>
-			<Col s={4}>
+			<Col sm={4}>
 				<div>match date & time</div>
 				<h4>
 					{matchDate} {matchTime}

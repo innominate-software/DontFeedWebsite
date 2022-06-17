@@ -8,13 +8,13 @@ export default function MatchPlayers({ teamA, teamB, page }) {
 		<Row className="match-players">
 			<h4>Players</h4>
 			<Row className="center-players">
-				<Col s={5}>
+				<Col sm={5}>
 					<ActivePlayers players={teamA} page={page} />
 				</Col>
-				<Col s={1} className="versus">
+				<Col sm={1} className="versus">
 					<h3>VS</h3>
 				</Col>
-				<Col s={5}>
+				<Col sm={5}>
 					<ActivePlayers players={teamB} page={page} />
 				</Col>
 			</Row>

@@ -9,18 +9,18 @@ export default function MatchTitle({ eventName, victor, score }) {
 				<h5 className="match-league">{eventName}</h5>
 			</Row>
 			<Row>
-				<Col s={3} />
-				<Col s={6}>
+				<Col sm={3} />
+				<Col sm={6}>
 					<h5 className="green-text match-victor">{victor} Victory</h5>
 				</Col>
-				<Col s={3} />
+				<Col sm={3} />
 			</Row>
 			<Row>
-				<Col s={4} />
-				<Col s={4}>
+				<Col sm={4} />
+				<Col sm={4}>
 					<h5 className="match-score">{score}</h5>
 				</Col>
-				<Col s={4} />
+				<Col sm={4} />
 			</Row>
 		</Row>
 	);
