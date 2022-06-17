@@ -12,12 +12,6 @@ import LeagueBanner from "./LeagueBanner";
 import { league } from "../../assets/dummydata/DummyLeague.json";
 
 function LeagueProfilePage(props) {
-	// const { read, setErrorHandler } = props;
-	// const id = props.match.params.id;
-	// useEffect(() => {
-	// read(id, setErrorHandler);
-	// }, [read, id, setErrorHandler]);
-
 	const joinLeague = event => {
 		event.preventDefault();
 		console.log("joining league maybe");
@@ -28,8 +22,11 @@ function LeagueProfilePage(props) {
 				<LeagueBanner league={league} joinLeague={joinLeague} />
 			</Row>
 			<Row>
-				<Tabs defaultActiveKey="standings" className="mb-3">
-					<Tab eventKey="standings" title="Standings">
+				<Tabs
+					defaultActiveKey="standings"
+					className="mb-3 justify-content-center"
+				>
+					<Tab eventKey="standings" title="Standings" className="mx-5">
 						{league.standings ? (
 							<Standings standings={league?.standings} />
 						) : (

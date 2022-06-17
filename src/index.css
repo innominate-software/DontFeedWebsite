@@ -176,6 +176,10 @@ h5 {
 	text-transform: uppercase;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 .app-container {
 	min-height: 90vh;
 	padding: 0;
@@ -234,8 +238,35 @@ h5 {
 	margin: 1em;
 }
 
-/* making new classes anything in here stays anything outside is gone*/
+.league-info {
+	background: rgba(30, 34, 42, 0.9);
+	margin: 120px 0;
+	border-radius: 48px;
+}
 
+.league-info p {
+	color: #fff;
+	opacity: 1;
+	font-size: 20px;
+	font-family: "Nexa Bold", serif;
+}
+
+.table {
+	background-color: #fff;
+}
+
+.join-league {
+	font-weight: bold;
+}
+
+.grey-btn {
+	color: #1f2833 !important;
+	background: #95afc0 !important;
+	border-radius: 6px !important;
+}
+
+/* making new classes anything in here stays anything outside is gone*/
+/* 
 .content-container {
 	width: 85% !important;
 }
@@ -293,12 +324,6 @@ h5 {
 	border-radius: 6px !important;
 }
 
-.grey-btn {
-	color: #1f2833 !important;
-	background: #95afc0 !important;
-	border-radius: 6px !important;
-}
-
 .forgot-password-text {
 	text-align: right;
 	margin-top: 0;
@@ -333,24 +358,6 @@ h5 {
 
 .login-card {
 	color: #fff !important;
-}
-
-.df-table-head {
-	font-size: 17px;
-	border-bottom: 2px solid #95afc0;
-}
-
-.df-table-head th,
-.df-table-tr td {
-	text-align: center;
-}
-
-.df-table-tr:hover {
-	background: rgba(14, 14, 14, 0.4) !important;
-}
-
-table.striped > tbody > tr:nth-child(odd) {
-	background-color: rgb(30, 34, 42) !important;
 }
 
 .tabs {
@@ -479,23 +486,6 @@ table.striped > tbody > tr:nth-child(odd) {
 	margin-bottom: 4rem;
 }
 
-.join-league {
-	font-weight: bold;
-}
-
-.league-info {
-	background: rgba(30, 34, 42, 0.7);
-	margin: 120px 0;
-	border-radius: 48px;
-}
-
-.league-info p {
-	color: #fff;
-	opacity: 1;
-	font-size: 20px;
-	font-family: "Nexa Bold", serif;
-}
-
 .previous-matches {
 	margin-top: 3rem !important;
 }
@@ -534,16 +524,16 @@ table.striped > tbody > tr:nth-child(odd) {
 	border-radius: 6px;
 }
 
-.search-table {
+/* .search-table {
 	margin-bottom: 2rem !important;
-}
+} */
 
-.search-table-title {
+/* .search-table-title {
 	background: #1e222a;
 	border-radius: 25px;
 	margin: 0 auto 0 auto;
 	max-width: 10rem;
-}
+} 
 
 .toggle-box {
 	margin: 4rem 1rem !important;
@@ -618,26 +608,7 @@ table.striped > tbody > tr:nth-child(odd) {
 .versus {
 	margin-bottom: auto;
 }
-/* ============================================================ table ========================== */
 
-table > thead > tr {
-	color: var(--df-grey);
-}
-
-.tabs .tab a:focus,
-.tabs .tab a:focus.active {
-	background-color: rgba(149, 175, 192, 0.2) !important;
-	outline: none;
-}
-
-.tabs .indicator {
-	position: absolute;
-	bottom: 0;
-	height: 5px !important;
-	background-color: #eb4d4b !important;
-	will-change: left, right;
-}
-
-.df-tab {
-	border-right: 1px solid rgba(14, 14, 14, 0.3) !important;
-}
+.nav-tabs .nav-item {
+	margin: 0 2rem 0 2rem;
+} */
