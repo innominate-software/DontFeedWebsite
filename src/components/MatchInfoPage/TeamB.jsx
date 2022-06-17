@@ -6,10 +6,10 @@ import defaultTeam from "../../assets/img/default-team.png";
 export default function TeamB({ name }) {
 	return (
 		<Row>
-			<Col s={4} className="match-team-name">
+			<Col sm={4} className="match-team-name">
 				<h4 className="right">{name}</h4>
 			</Col>
-			<Col s={4}>
+			<Col sm={4}>
 				<img
 					className="match-team-pic"
 					src={defaultTeam}

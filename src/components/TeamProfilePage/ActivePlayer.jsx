@@ -4,7 +4,7 @@ import defaultUser from "../../assets/img/logos/users/default_profile_pic.jpeg";
 
 export default function ActivePlayer({ player }) {
 	return (
-		<Col s={2} className="df-light-grey-text">
+		<Col sm={2} className="df-light-grey-text">
 			<img
 				src={player.profilePic ?? defaultUser}
 				className="team-players"
