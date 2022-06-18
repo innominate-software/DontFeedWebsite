@@ -353,6 +353,11 @@ h5 {
 	justify-content: center;
 	align-items: center;
 }
+	
+	#active-roster h1 {
+	margin-top: 0;
+	margin-bottom: 4rem;
+}
 
 /* making new classes anything in here stays anything outside is gone*/
 /* 
@@ -540,11 +545,6 @@ h5 {
 
 .user-game-bubbles {
 	margin: 2rem 0 !important;
-}
-
-#active-roster h1 {
-	margin-top: 0;
-	margin-bottom: 4rem;
 }
 
 .previous-matches {

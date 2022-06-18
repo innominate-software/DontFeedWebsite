@@ -15,7 +15,7 @@ export default function Team({ teamLogo, teamName }) {
 					/>
 				</Col>
 				<Col s={9} className="left-align player-names-info df-light-grey-text">
-					<h4 className="team-name">{teamName}</h4>
+					<h4>{teamName}</h4>
 				</Col>
 			</Row>
 		</Col>
