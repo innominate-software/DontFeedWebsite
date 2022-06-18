@@ -7,7 +7,7 @@ export default function Matches({ matches }) {
 	if (matches?.length !== 0) {
 		matchTabContent = (
 			<Table striped bordered>
-				<thead className="df-table-head df-light-grey-text">
+				<thead>
 					<tr>
 						<th>Game</th>
 						<th>Event</th>
@@ -36,5 +36,5 @@ export default function Matches({ matches }) {
 			</Table>
 		);
 	}
-	return <Col id="teamMatches">{matchTabContent}</Col>;
+	return <Col id="team-matches">{matchTabContent}</Col>;
 }

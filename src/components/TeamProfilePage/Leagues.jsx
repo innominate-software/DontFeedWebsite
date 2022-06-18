@@ -7,7 +7,7 @@ export default function Leagues({ leagues }) {
 	if (leagues?.length !== 0) {
 		leagueTabContent = (
 			<Table striped bordered>
-				<thead className="df-table-head df-light-grey-text">
+				<thead>
 					<tr>
 						<th>Game</th>
 						<th>Name</th>
@@ -36,5 +36,5 @@ export default function Leagues({ leagues }) {
 			</Table>
 		);
 	}
-	return <Col id="teamLeagues">{leagueTabContent}</Col>;
+	return <Col id="team-leagues">{leagueTabContent}</Col>;
 }
