@@ -16,7 +16,7 @@ import { team } from "../../assets/dummydata/DummyTeam.json";
 function TeamProfilePage(props) {
 	return (
 		<Container fluid className="app-container df-dark-background-2">
-			<Row className="team-info">
+			<Row>
 				<Team teamLogo={team?.logo} teamName={team?.name} />
 				<TeamInfo
 					dateCreated={team?.dateCreated}
