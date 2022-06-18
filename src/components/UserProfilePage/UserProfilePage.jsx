@@ -33,10 +33,10 @@ function UserProfilePage() {
 			</Row>
 			<Row>
 				<Col>
-					<Tabs id="userProfileTabs">
-						<Tab eventKey="games" title="Games">
-							<Games username={user?.username} games={user?.games} />
-						</Tab>
+					<Tabs id="user-profile-tabs">
+						{/* <Tab eventKey="games" title="Games"> */}
+						{/* <Games username={user?.username} games={user?.games} /> */}
+						{/* </Tab> */}
 						<Tab eventKey="teams" title="Teams">
 							<Teams teams={user?.teams} />
 						</Tab>

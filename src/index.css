@@ -336,6 +336,24 @@ h5 {
 	text-overflow: ellipsis;
 }
 
+.user-info,
+.team-info {
+	margin: 3rem 0 4rem !important;
+}
+
+.player-names-info {
+	padding-bottom: 0 !important;
+	padding-top: 1.5rem !important;
+	min-height: 6.25rem !important;
+}
+
+.team-container div.center,
+.toggle-box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* making new classes anything in here stays anything outside is gone*/
 /* 
 .content-container {
@@ -496,12 +514,6 @@ h5 {
 	text-overflow: ellipsis;
 }
 
-.player-names-info {
-	padding-bottom: 0 !important;
-	padding-top: 1.5rem !important;
-	min-height: 6.25rem !important;
-}
-
 .player-name {
 	margin-bottom: 0;
 }
@@ -510,17 +522,7 @@ h5 {
 	margin: 0;
 }
 
-.team-container div.center,
-.toggle-box-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.user-info,
-.team-info {
-	margin: 3rem 0 4rem !important;
-}
 
 .left-team > .user-team-info {
 	padding-top: 30px !important;
