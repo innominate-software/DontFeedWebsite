@@ -7,8 +7,7 @@ export default function MatchInfo({
 	game,
 	id,
 	matchId,
-	matchDate,
-	matchTime,
+	match_date_time,
 }) {
 	switch (game) {
 		case "DOTA2":
@@ -31,9 +30,7 @@ export default function MatchInfo({
 			</Col>
 			<Col sm={4}>
 				<div>match date & time</div>
-				<h4>
-					{matchDate} {matchTime}
-				</h4>
+				<h4>{match_date_time}</h4>
 			</Col>
 		</Row>
 	);

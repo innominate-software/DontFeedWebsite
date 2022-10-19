@@ -5,16 +5,11 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useHistory } from "react-router";
-import { connect } from "react-redux";
-import { TeamCreateAction } from "../../redux/actions/TeamActions";
-import teamDataService from "../../services/team.service";
 
 function TeamCreationPage(props) {
 	const { teamCreate } = props;
 	const [teamState, setTeamState] = useState({});
 	const [formValidation, setFormValidation] = useState({});
-	const history = useHistory();
 	// const [errorHandler, setErrorHandler] = useState({
 	//     hasError: false,
 	//     message: "",
@@ -30,34 +25,14 @@ function TeamCreationPage(props) {
 				<Form
 					onSubmit={event => {
 						event.preventDefault();
-						teamCreate(teamState, history);
+						teamCreate(teamState);
 					}}
 				>
 					<Row>
 						<Col>
 							<Form.Group as={Col} className="mb-3" controlId="teamCreateName">
 								<Form.Label className="ms-3">Team Name</Form.Label>
-								<Form.Control
-									required
-									type="text"
-									placeholder="Team Name"
-									onBlur={event => {
-										const name = event.target.value.trim();
-										setTeamState({ ...teamState, ...{ name } });
-										teamDataService.existsByName(name).then(response => {
-											setFormValidation({
-												...formValidation,
-												validName: !response.data,
-											});
-										});
-										if (name === "") {
-											setFormValidation({
-												...formValidation,
-												validName: false,
-											});
-										}
-									}}
-								/>
+								<Form.Control required type="text" placeholder="Team Name" />
 								<Form.Text
 									className={
 										teamState.name
@@ -130,18 +105,4 @@ function TeamCreationPage(props) {
 	);
 }
 
-const mapStateToProps = state => {
-	return {
-		team: state,
-	};
-};
-
-const mapDispatchToProps = dispatch => {
-	return {
-		teamCreate: (teamState, history, setErrorHandler) => {
-			dispatch(TeamCreateAction(teamState, history, setErrorHandler));
-		},
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TeamCreationPage);
+export default TeamCreationPage;

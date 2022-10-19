@@ -4,28 +4,29 @@ import Col from "react-bootstrap/Col";
 import Team from "./Team";
 
 export default function Teams({ teams }) {
+	// console.log(teams);
 	let activeTeams = <h6>Currently not on a team</h6>;
 	let previousTeams = <h6>Currently no previous teams</h6>;
-	if (teams.activeTeams.length !== 0) {
-		activeTeams = teams?.activeTeams.map((team, index) => (
+	if (teams?.activeTeams?.length !== 0) {
+		activeTeams = teams?.activeTeams?.map((team, index) => (
 			<Team
 				key={index}
 				index={index}
 				teamLogo={team.logo}
 				teamName={team.name}
-				startDate={team.dateCreated}
+				dateJoined={team.dateJoined}
 			/>
 		));
 	}
-	if (teams.previousTeams.length !== 0) {
-		previousTeams = teams?.previousTeams.map((team, index) => (
+	if (teams?.previousTeams?.length !== 0) {
+		previousTeams = teams?.previousTeams?.map((team, index) => (
 			<Team
 				key={index}
 				index={index}
 				teamLogo={team.teamLogo}
 				teamName={team.name}
-				startDate={team.startDate}
-				endDate={team.endDate}
+				dateJoined={team.dateJoined}
+				dateLeft={team.dateLeft}
 			/>
 		));
 	}

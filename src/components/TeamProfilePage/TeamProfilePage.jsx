@@ -11,9 +11,9 @@ import ActiveRoster from "./ActiveRoster";
 import Matches from "./Matches";
 import Leagues from "./Leagues";
 import PlayerHistory from "./PlayerHistory";
-import { team } from "../../assets/dummydata/DummyTeam.json";
+import team from "../../assets/dummydata/DummyTeam.json";
 
-function TeamProfilePage(props) {
+let TeamProfilePage = () => {
 	return (
 		<Container fluid className="app-container df-dark-background-2">
 			<Row>
@@ -46,6 +46,6 @@ function TeamProfilePage(props) {
 			</Row>
 		</Container>
 	);
-}
+};
 
 export default TeamProfilePage;

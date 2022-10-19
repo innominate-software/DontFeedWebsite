@@ -38,7 +38,7 @@ export default function Support({ contacts, rules }) {
 					{/* <span className="card-title"> */}
 					<h5>Rules</h5>
 					{/* </span> */}
-					<p>{rulesContent}</p>
+					<p>{rules ?? rulesContent}</p>
 				</Card.Body>
 			</Card>
 		</Col>

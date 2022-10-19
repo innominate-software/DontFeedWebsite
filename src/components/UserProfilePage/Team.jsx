@@ -7,8 +7,8 @@ export default function Team({
 	index,
 	teamLogo,
 	teamName,
-	startDate,
-	endDate,
+	dateJoined,
+	dateLeft,
 }) {
 	return index % 2 === 0 ? (
 		<Row className="left-team center">
@@ -22,7 +22,7 @@ export default function Team({
 			<Col className="user-team-info">
 				<h6>{teamName}</h6>
 				<span>
-					{startDate} - {endDate ?? "Current"}
+					{dateJoined} - {dateLeft ?? "Current"}
 				</span>
 			</Col>
 		</Row>
@@ -31,7 +31,7 @@ export default function Team({
 			<Col className="user-team-info">
 				<h6>{teamName}</h6>
 				<span>
-					{startDate} - {endDate ?? "Current"}
+					{dateJoined} - {dateLeft ?? "Current"}
 				</span>
 			</Col>
 			<Col>

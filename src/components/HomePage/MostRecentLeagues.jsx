@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export default function MostRecentLeagues({ leagues }) {
+	console.log(leagues);
 	return (
 		<React.Fragment>
 			<h2 className="my-3 df-light-grey-text">Most Recent Leagues</h2>

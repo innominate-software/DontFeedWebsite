@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 
 export default function Leagues({ leagues }) {
+	// console.log(leagues);
 	let leagueTabContent = <h3>Currently no leagues have been recorded</h3>;
 	if (leagues?.length !== 0) {
 		leagueTabContent = (
@@ -20,7 +21,7 @@ export default function Leagues({ leagues }) {
 					</tr>
 				</thead>
 				<tbody>
-					{leagues.map((league, index) => (
+					{leagues?.map((league, index) => (
 						<tr key={index}>
 							<td>{league.game}</td>
 							<td>{league.name}</td>

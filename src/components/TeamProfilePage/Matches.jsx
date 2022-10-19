@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 
 export default function Matches({ matches }) {
+	// console.log(matches);
 	let matchTabContent = <h3>Currently no matches have been recorded</h3>;
 	if (matches?.length !== 0) {
 		matchTabContent = (
@@ -20,8 +21,8 @@ export default function Matches({ matches }) {
 					</tr>
 				</thead>
 				<tbody>
-					{matches.map((match, index) => (
-						<tr>
+					{matches?.map((match, index) => (
+						<tr key={index}>
 							<td>{match.game}</td>
 							<td>{match.event}</td>
 							<td>{match.homeTeam}</td>

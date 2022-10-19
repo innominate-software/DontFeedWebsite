@@ -1,6 +1,4 @@
-import React from "react";
-import { connect } from "react-redux";
-import { LeagueReadAction } from "../../redux/actions/LeagueActions";
+import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
@@ -9,13 +7,31 @@ import Standings from "./Standings";
 import LeagueMatches from "./LeagueMatches";
 import Support from "./Support";
 import LeagueBanner from "./LeagueBanner";
-import { league } from "../../assets/dummydata/DummyLeague.json";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { getLeague } from "../../redux/features/league-profile.feature";
 
-function LeagueProfilePage(props) {
+let LeagueProfilePage = () => {
+	let dispatch = useDispatch();
+	let leagueState = useSelector(store => {
+		return store["league"];
+	});
+
+	const id = useParams().id;
+	useEffect(() => {
+		async function fetchData() {
+			dispatch(getLeague(id));
+		}
+		fetchData();
+	}, [dispatch, id]);
+
+	let { loading, errorMessage, league } = leagueState;
+
 	const joinLeague = event => {
 		event.preventDefault();
 		console.log("joining league maybe");
 	};
+	console.log(league);
 	return (
 		<Container fluid className="app-container df-dark-background px-0">
 			<Row>
@@ -43,20 +59,6 @@ function LeagueProfilePage(props) {
 			</Row>
 		</Container>
 	);
-}
-
-const mapStateToProps = state => {
-	return {
-		league: state.leagueState.league,
-	};
 };
 
-const mapDispatchToProps = dispatch => {
-	return {
-		read: (id, setErrorHandler) => {
-			dispatch(LeagueReadAction(id, setErrorHandler));
-		},
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LeagueProfilePage);
+export default LeagueProfilePage;

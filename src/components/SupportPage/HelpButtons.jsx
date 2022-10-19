@@ -1,20 +1,16 @@
 import React from "react";
-import HelpButton from "./HelpButton";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import ReportCheaterModal from "../utils/modals/ReportCheaterModal";
+import SubmitFeedbackModal from "../utils/modals/SubmitFeedbackModal";
+import ChangePasswordModal from "../utils/modals/ChangePasswordModal";
 
 export default function HelpButtons(props) {
-    return(
-        <Row>
-            <Col>
-                <HelpButton label="Submit Feedback" />
-            </Col>
-            <Col>
-                <HelpButton label="Report Cheater" />
-            </Col>
-            <Col>
-                <HelpButton label="Change Password" />
-            </Col>
-        </Row>
-    )
+	return (
+		<Row>
+			<SubmitFeedbackModal />
+			<ReportCheaterModal />
+			{/* TODO: make disabled if not logged in */}
+			<ChangePasswordModal />
+		</Row>
+	);
 }

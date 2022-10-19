@@ -1,35 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { closeErrorModal } from "../../../redux/features/error-modal.feature";
 
-function ErrorModal(props) {
-	const { show, setShow, setLoginShow, setRegisterShow, errorHandler, setErrorHandler } = props;
+let ErrorModal = () => {
+	let dispatch = useDispatch();
+
+	let errorModalState = useSelector(store => {
+		return store["errorModal"];
+	});
+
+	let { isOpen } = errorModalState;
+
 	const handleClose = () => {
-		setErrorHandler({
-			hasError: false,
-			message: ""
-		})
-		setShow(false);
-	}
-	const handleRegisterShow = () => {
-		handleClose()
-		setRegisterShow(true);
-	}
-	const handleLoginShow = () => {
-		handleClose()
-		setLoginShow(true);
-	}
-	useEffect(() => {
-		if (errorHandler.hasError) {
-			setShow(true);
-		} else {
-			setShow(false);
-		}
-		
-	})
+		dispatch(closeErrorModal());
+	};
+	const message = "GENERIC MESSAGE";
 	return (
 		<Modal
-			show={show}
+			show={isOpen}
 			onHide={handleClose}
 			backdrop="static"
 			keyboard={false}
@@ -37,16 +27,14 @@ function ErrorModal(props) {
 			<Modal.Header closeButton>
 				<Modal.Title>ERROR</Modal.Title>
 			</Modal.Header>
-			<Modal.Body>
-				{errorHandler.message}
-			</Modal.Body>
+			<Modal.Body>{message}</Modal.Body>
 			<Modal.Footer>
-				<Button variant="primary" onClick={handleClose}>Understood</Button>
-				{errorHandler.message === "Username or Password are incorrect" ?
-					<Button variant="secondary" onClick={handleLoginShow}>Try Again</Button>
-					: null}
+				<Button variant="primary" onClick={handleClose}>
+					Understood
+				</Button>
 			</Modal.Footer>
-		</Modal>)
-}
+		</Modal>
+	);
+};
 
-export default (ErrorModal);
+export default ErrorModal;

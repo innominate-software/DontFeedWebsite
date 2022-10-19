@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,44 +9,61 @@ import TeamA from "./TeamA";
 import TeamB from "./TeamB";
 import MatchInfo from "./MatchInfo";
 import MatchPlayers from "./MatchPlayers";
-import { match } from "../../assets/dummydata/DummyMatch.json";
+import { useDispatch, useSelector } from "react-redux";
+import { getMatch } from "../../redux/features/match-info.feature";
 
 function MatchInfoPage(props) {
 	const page = "MatchInfoPage";
+
+	let dispatch = useDispatch();
+	let matchState = useSelector(store => {
+		return store["match"];
+	});
+
+	const id = useParams().id;
+	useEffect(() => {
+		async function fetchData() {
+			dispatch(getMatch(id));
+		}
+		fetchData();
+	}, [dispatch, id]);
+
+	let { loading, errorMessage, match } = matchState;
+
+	// console.log(match);
 	return (
 		<Container fluid className="app-container df-dark-background-2">
-			{/* <MatchBanner game={match.game} /> */}
+			{/* <MatchBanner game={match.map} /> */}
 			<Row>
 				<Col sm={2} />
 				<Col sm={8}>
 					<MatchTitle
-						eventName={match.event}
-						victor={match.victor}
-						score={match.score}
+						eventName={match?.league?.name}
+						victor={match?.victor}
+						score={match?.score}
 					/>
 				</Col>
 				<Col sm={2} />
 			</Row>
 			<Row className="df-light-grey-text">
 				<Col sm={6}>
-					<TeamA name={match.teamA.name} />
+					<TeamA name={match?.teamA?.name} />
 				</Col>
 				<Col sm={6}>
-					<TeamB name={match.teamB.name} />
+					<TeamB name={match?.teamB?.name} />
 				</Col>
 			</Row>
 			<div className="player-container df-light-grey-text">
 				<MatchInfo
-					id={match.id}
-					duration={match.duration}
-					game={match.game}
-					matchId={match.gameMatchId}
-					matchDate={match.matchDate}
-					matchTime={match.matchTime}
+					id={match?.id}
+					duration={match?.duration}
+					game={match?.game}
+					matchId={match?.game_match_id}
+					match_date_time={match?.match_date_time}
 				/>
 				<MatchPlayers
-					teamA={match.teamA.players}
-					teamB={match.teamB.players}
+					teamA={match?.teamA?.players}
+					teamB={match?.teamB?.players}
 					page={page}
 				/>
 			</div>

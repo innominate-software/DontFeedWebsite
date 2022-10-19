@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import User from "./User";
 import UserInfo from "./UserInfo";
 import Container from "react-bootstrap/Container";
@@ -10,33 +10,48 @@ import Games from "./Games";
 import Teams from "./Teams";
 import Matches from "../TeamProfilePage/Matches";
 import Leagues from "../TeamProfilePage/Leagues";
-import { connect } from "react-redux";
-import { user } from "../../assets/dummydata/DummyUser.json";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { getUser } from "../../redux/features/user-profile.feature";
 
-function UserProfilePage() {
+let UserProfilePage = () => {
+	let dispatch = useDispatch();
+	let userState = useSelector(store => {
+		return store["user"];
+	});
+
+	const id = useParams().id;
+	useEffect(() => {
+		async function fetchData() {
+			dispatch(getUser(id));
+		}
+		fetchData();
+	}, [dispatch, id]);
+
+	let { loading, errorMessage, user } = userState;
+
+	console.log(user);
 	return (
 		<Container fluid className="app-container df-dark-background-2">
 			<Row className="user-info">
 				<User
 					profilePic={user?.profilePic}
 					username={user?.username}
-					teams={user?.teams.activeTeams}
+					teams={user?.teams?.activeTeams}
 				/>
 				<UserInfo
-					dateJoined={user?.dateJoined}
+					dateJoined={user?.date_joined}
 					lastOnline={"upcoming with Security Update"}
-					numberOfActiveLeagues={user?.activeLeagues}
-					numberOfFirstPlaceTrophies={
-						user?.numberOfFirstPlaceTrophies ?? "not yet calculating"
-					}
+					numberOfActiveLeagues={user?.numberOfActiveLeagues}
+					numberOfFirstPlaceTrophies={user?.numberOfFirstPlaceTrophies}
 				/>
 			</Row>
 			<Row>
 				<Col>
 					<Tabs id="user-profile-tabs">
-						{/* <Tab eventKey="games" title="Games"> */}
-						{/* <Games username={user?.username} games={user?.games} /> */}
-						{/* </Tab> */}
+						{/* <Tab eventKey="games" title="Games">
+							<Games username={user?.username} games={user?.games} />
+						</Tab> */}
 						<Tab eventKey="teams" title="Teams">
 							<Teams teams={user?.teams} />
 						</Tab>
@@ -51,12 +66,6 @@ function UserProfilePage() {
 			</Row>
 		</Container>
 	);
-}
-
-const mapStateToProps = state => {
-	return {
-		auth: state.authState,
-	};
 };
 
-export default connect(mapStateToProps)(UserProfilePage);
+export default UserProfilePage;

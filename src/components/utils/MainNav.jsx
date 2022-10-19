@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LoginModal from "./modals/LoginModal";
-import { connect } from "react-redux";
-import { LogOutAuthAction } from "../../redux/actions/AuthActions";
 import RegisterModal from "./modals/RegisterModal";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -11,23 +9,15 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import ErrorModal from "./modals/ErrorModal";
+import { useDispatch } from "react-redux";
+import { openLoginModal } from "../../redux/features/login-modal.feature";
+import SearchModal from "./modals/SearchModal";
 
-function MainNav(props) {
-	const {
-		auth,
-		logout,
-		errorHandler,
-		setErrorHandler,
-		errorModalShow,
-		setErrorModalShow,
-		loginModalShow,
-		setLoginModalShow,
-		registerModalShow,
-		setRegisterModalShow,
-	} = props;
-	const history = useHistory();
-	const [searchModalShow, setSearchModalShow] = useState(false);
-
+let MainNav = () => {
+	let dispatch = useDispatch();
+	let handleLoginModalOpen = () => {
+		dispatch(openLoginModal());
+	};
 	return (
 		<React.Fragment>
 			<Navbar sticky="top" expand="lg" className="df-dark-background">
@@ -111,88 +101,17 @@ function MainNav(props) {
 								</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
-						<Form className="d-flex w-100">
-							<FormControl
-								type="search"
-								placeholder="Search"
-								aria-label="Search"
-							/>
-							{auth.isLoggedIn ? (
-								<h5 className="mx-3 my-auto df-pink-text">
-									<Link
-										to={`/user/${auth.user.id}`}
-										className="df-pink-text text-decoration-none"
-									>
-										{auth.user.username}
-									</Link>
-								</h5>
-							) : (
-								<Button
-									className="btn btn-primary mx-2"
-									onClick={() => setLoginModalShow(true)}
-								>
-									Login
-								</Button>
-							)}
-							{auth.isLoggedIn ? (
-								<Button
-									className="btn btn-primary"
-									onClick={() => {
-										logout(auth, history);
-									}}
-								>
-									Logout
-								</Button>
-							) : (
-								<Button
-									className="btn btn-primary"
-									onClick={() => setRegisterModalShow(true)}
-								>
-									Signup
-								</Button>
-							)}
-						</Form>
+						<SearchModal />
+						<h5 className="mx-3 my-auto df-pink-text">USERNAME</h5>
+						<LoginModal />
+						<Button className="btn btn-primary">Logout</Button>
+						<RegisterModal />
 					</Navbar.Collapse>
 				</div>
 			</Navbar>
-			<LoginModal
-				show={loginModalShow}
-				setShow={setLoginModalShow}
-				setRegisterShow={setRegisterModalShow}
-				setErrorHandler={setErrorHandler}
-			/>
-			<RegisterModal
-				show={registerModalShow}
-				setShow={setRegisterModalShow}
-				setLoginShow={setLoginModalShow}
-				setErrorHandler={setErrorHandler}
-			/>
-			{/*todo search modal*/}
-			<ErrorModal
-				show={errorModalShow}
-				setShow={setErrorModalShow}
-				setLoginShow={setLoginModalShow}
-				setRegisterShow={setRegisterModalShow}
-				errorHandler={errorHandler}
-				setErrorHandler={setErrorHandler}
-			/>
+			<ErrorModal />
 		</React.Fragment>
 	);
-}
-
-const mapStateToProps = state => {
-	return {
-		auth: state.authState,
-		user: state.user,
-	};
 };
 
-const mapDispatchToProps = dispatch => {
-	return {
-		logout: (userState, history) => {
-			dispatch(LogOutAuthAction(userState, history));
-		},
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(MainNav);
+export default MainNav;

@@ -1,89 +1,87 @@
 {
-	"homePage": {
-		"newsStories": [],
-		"mostRecentLeagues": [
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			}
-		],
-		"leaguesWithOpenRegistration": [
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			},
-			{
-				"id": 1,
-				"name": "EPIC League Division 1",
-				"game": "Dota 2",
-				"maxTeams": 10,
-				"platform": "pc",
-				"startDate": "2020-11-12"
-			}
-		]
-	}
+	"newsStories": [],
+	"mostRecentLeagues": [
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		}
+	],
+	"leaguesWithOpenRegistration": [
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		},
+		{
+			"id": 1,
+			"name": "EPIC League Division 1",
+			"game": "Dota 2",
+			"maxTeams": 10,
+			"platform": "pc",
+			"startDate": "2020-11-12"
+		}
+	]
 }
