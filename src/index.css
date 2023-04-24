@@ -1,31 +1,31 @@
 @font-face {
-	font-family: "Nexa";
+	font-family: 'Nexa';
 	font-style: normal;
 	font-weight: 400;
-	src: local("Nexa"),
-		url(../src/assets/font/Nexa/nexa_bold.otf) format("opentype"),
-		url(../src/assets/font/Nexa/nexa_bold.woff) format("woff"),
-		url(../src/assets/font/Nexa/nexa_bold.woff2) format("woff2");
+	src: local('Nexa'),
+		url(../src/assets/font/Nexa/nexa_bold.otf) format('opentype'),
+		url(../src/assets/font/Nexa/nexa_bold.woff) format('woff'),
+		url(../src/assets/font/Nexa/nexa_bold.woff2) format('woff2');
 }
 
 @font-face {
-	font-family: "Nexa Bold";
+	font-family: 'Nexa Bold';
 	font-style: normal;
 	font-weight: 700;
-	src: local("Nexa Bold"),
-		url(../src/assets/font/Nexa/nexa_bold.otf) format("opentype"),
-		url(../src/assets/font/Nexa/nexa_bold.woff) format("woff"),
-		url(../src/assets/font/Nexa/nexa_bold.woff2) format("woff2");
+	src: local('Nexa Bold'),
+		url(../src/assets/font/Nexa/nexa_bold.otf) format('opentype'),
+		url(../src/assets/font/Nexa/nexa_bold.woff) format('woff'),
+		url(../src/assets/font/Nexa/nexa_bold.woff2) format('woff2');
 }
 
 @font-face {
-	font-family: "Nexa Thin";
+	font-family: 'Nexa Thin';
 	font-style: normal;
 	font-weight: 100;
-	src: local("Nexa Thin"),
-		url(../src/assets/font/Nexa/nexa_light.otf) format("opentype"),
-		url(../src/assets/font/Nexa/nexa_light.woff) format("woff"),
-		url(../src/assets/font/Nexa/nexa_light.woff2) format("woff2");
+	src: local('Nexa Thin'),
+		url(../src/assets/font/Nexa/nexa_light.otf) format('opentype'),
+		url(../src/assets/font/Nexa/nexa_light.woff) format('woff'),
+		url(../src/assets/font/Nexa/nexa_light.woff2) format('woff2');
 }
 
 /* var(--variable-name)*/
@@ -42,13 +42,13 @@
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
 
 body {
 	margin: 0;
-	font-family: "Nexa", serif !important;
+	font-family: 'Nexa', serif !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #1f2833;
@@ -73,9 +73,12 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: "Nexa Bold", serif !important;
+	font-family: 'Nexa Bold', serif !important;
 	letter-spacing: 2px;
 	color: var(--df-grey);
+}
+.maintenance-modal {
+	min-width: 170%;
 }
 
 .df-dark-background {
@@ -240,7 +243,7 @@ h5 {
 	color: #fff;
 	opacity: 1;
 	font-size: 20px;
-	font-family: "Nexa Bold", serif;
+	font-family: 'Nexa Bold', serif;
 }
 
 .table {
@@ -353,8 +356,8 @@ h5 {
 	justify-content: center;
 	align-items: center;
 }
-	
-	#active-roster h1 {
+
+#active-roster h1 {
 	margin-top: 0;
 	margin-bottom: 4rem;
 }
